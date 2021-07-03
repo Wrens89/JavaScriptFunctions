@@ -15,6 +15,14 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 6
+const cumLaudeStuks = [];
+
+for (let i = 0; i < grades.length; i++) {
+    if(grades[i] >= 8) {
+        cumLaudeStuks.push(grades[i]);
+    }
+}
+console.log(cumLaudeStuks.length);
 
 
 /*  1b: Omschrijven tot een herbruikbare functie   */
@@ -27,6 +35,20 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
 
+function cumLaude (array) {
+    const grades = array.length;
+    const cumLaudeOutput = [];
+
+    for (let i = 0; i < grades; i++) {
+        if (grades[i] >= 8) {
+            cumLaudeOutput.push(grades[i])
+        }
+        else (cumLaudeOutput.push())
+    }
+    return cumLaudeOutput.length;
+}
+const cumLaudeGrades = cumLaude([8, 9, 4, 6, 10]);
+console.log(cumLaudeGrades);
 
 
 
